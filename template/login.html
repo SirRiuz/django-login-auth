@@ -1,0 +1,50 @@
+
+{% extends 'base.html' %}
+
+
+{% block header %}
+    <title> Login </title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'index.css'%}">
+{% endblock %}
+
+{% block contend %}
+    <div class='container'>
+        <div class='row justify-content-md-center'>
+            <div class='col col-md-2'></div>
+            <div class='col col-md-5'>
+                <div class='container container-login'>
+                    <h3>Inicia sesion</h3>
+                    <br>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                          <input type="email" name='email' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                          <input type="password" name='password' class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+
+                    {% if error %}
+                      jbbu
+                    {% endif %}
+
+                </div>
+            </div>
+            <div class='col col-md-2'></div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

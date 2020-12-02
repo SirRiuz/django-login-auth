@@ -1,0 +1,17 @@
+
+.container-login {
+    background:#fff;
+    padding:25px;
+    box-shadow: 1px 1px 15px rgba(0,0,0,0.05);
+    margin:30% auto;
+    border-radius: 10px;
+}
+
+
+.container-register {
+    background:#fff;
+    padding:25px;
+    box-shadow: 1px 1px 15px rgba(0,0,0,0.05);
+    margin:10% auto;
+    border-radius: 10px;
+}

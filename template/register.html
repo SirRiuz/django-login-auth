@@ -1,0 +1,59 @@
+
+{% extends 'base.html' %}
+
+
+{% block header %}
+    <title>Register</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'index.css'%}">
+{% endblock %}
+
+
+{% block contend %}
+
+<div class='container'>
+    <div class='row justify-content-md-center'>
+        <div class='col col-md-2'></div>
+        <div class='col col-md-5'>
+            <div class='container container-register'>
+                <h3>Registrate</h3>
+                <br>
+                <form method="POST"  enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                      <input type="text" name='name' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" name='description' class="form-control" id="exampleInputPassword1" placeholder="description">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name='email' class="form-control" id="exampleInputPassword1" placeholder="email">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name='password' class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      </div>
+                      <div class="form-group">
+                        <input type="file" name='imageProfile' accept="image/*" class="form-control" id="exampleInputPassword1">
+                      </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+
+                {% if form_error %}
+                  Los datos no son validos
+                {% endif %}
+
+            </div>
+        </div>
+        <div class='col col-md-2'></div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+
+
